@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Builder - Create Your AI Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Builder</h1>
+        <p>Create your custom AI Assistant or Bot with ease. Select the type of AI you need and customize it according to your requirements.</p>
+        
+        <form id="aiBuilderForm">
+            <div class="form-group">
+                <label for="aiType">Select AI Type:</label>
+                <select id="aiType" name="aiType">
+                    <option value="chatbot">Chatbot</option>
+                    <option value="personalAssistant">Personal Assistant</option>
+                    <option value="dataAnalyst">Data Analyst</option>
+                    <option value="customerSupport">Customer Support Bot</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="aiName">AI Name:</label>
+                <input type="text" id="aiName" name="aiName" placeholder="Enter a name for your AI">
+            </div>
+            
+            <div class="form-group">
+                <label for="aiDescription">AI Description:</label>
+                <textarea id="aiDescription" name="aiDescription" rows="4" placeholder="Describe the purpose of your AI"></textarea>
+            </div>
+            
+            <button type="submit">Build My AI</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('aiBuilderForm').onsubmit = function(event) {
+            event.preventDefault();
+            alert('Your AI is being built! We will notify you once it is ready.');
+            // Here you would typically send the form data to a server to process the AI creation
+        };
+    </script>
+</body>
+</html>
